@@ -43,18 +43,18 @@ namespace mRemoteNG.UI.Forms
         private ConnectionInfo _selectedConnection;
         private readonly IList<IMessageWriter> _messageWriters = new List<IMessageWriter>();
         private ThemeManager _themeManager;
-
         internal FullscreenHandler Fullscreen { get; set; }
         
         //Added theming support
         private readonly ToolStripRenderer _toolStripProfessionalRenderer = new ToolStripProfessionalRenderer();
+
 
         private FrmMain()
 		{
 			_showFullPathInTitle = Settings.Default.ShowCompleteConsPathInTitle;
 			InitializeComponent();
             Fullscreen = new FullscreenHandler(this);
-
+            
             //Theming support
             _themeManager = ThemeManager.getInstance();
             vsToolStripExtender.DefaultRenderer = _toolStripProfessionalRenderer;
@@ -190,7 +190,6 @@ namespace mRemoteNG.UI.Forms
             _quickConnectToolStrip.ConnectionInitiator = connectionInitiator;
         }
 
-
         //Theming support
         private void SetSchema()
         {
@@ -211,8 +210,6 @@ namespace mRemoteNG.UI.Forms
                 tsContainer.TopToolStripPanel.BackColor = _themeManager.ActiveTheme.ExtendedPalette.getColor("CommandBarMenuDefault_Background");
             }
         }
-		
- 
 
         private void frmMain_Shown(object sender, EventArgs e)
         {
