@@ -19,6 +19,7 @@ using mRemoteNG.Messages;
 using mRemoteNG.Messages.MessageWriters;
 using mRemoteNG.Themes;
 using mRemoteNG.Tools;
+using mRemoteNG.UI.Controls;
 using mRemoteNG.UI.Menu;
 using mRemoteNG.UI.TaskDialog;
 using mRemoteNG.UI.Window;
@@ -181,6 +182,7 @@ namespace mRemoteNG.UI.Forms
 
             viewMenu1.TsExternalTools = _externalToolsToolStrip;
             viewMenu1.TsQuickConnect = _quickConnectToolStrip;
+            viewMenu1.TsMultiSsh = _multiSshToolStrip;
             viewMenu1.FullscreenHandler = Fullscreen;
             viewMenu1.MainForm = this;
 
