@@ -18,7 +18,8 @@ namespace mRemoteNG.Config.DataProviders
         public DataTable Load()
         {
             var dataTable = new DataTable();
-            var sqlQuery = new SqlCommand("SELECT * FROM tblCons ORDER BY PositionID ASC");
+            //var sqlQuery = new SqlCommand("SELECT * FROM tblCons ORDER BY PositionID ASC");
+            var sqlQuery = new SqlCommand("exec SP_GetConsData");
             SqlDatabaseConnector.AssociateItemToThisConnector(sqlQuery);
             if (!SqlDatabaseConnector.IsConnected)
                 OpenConnection();
